@@ -22,3 +22,9 @@ then go into a rez environment like `rez-env photoshop_tools`, then launch photo
 Make changes to your script.js file, `rez-build --install` again, then run the script in photoshop.
 Since the stub relies on the $REZ_PHOTOSHOP_TOOLS_ROOT environment variable to find the script,
 it will pick up changes without having to relaunch photoshop every time.
+
+## Fallback
+Sometimes artists (or even myself) will launch photoshop normally, or will open a .psd file by double-clicking it.
+This will mean that it will not be in a rez environment, and won't have the $REZ_PHOTOSHOP_TOOLS_ROOT environment variable.
+To account for this, as part of the release process, I copy the build to a known location on a shared network.
+The stubs will fallback to that server location if the environment variable does not exist.
