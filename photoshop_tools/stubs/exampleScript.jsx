@@ -19,7 +19,7 @@ if (!scriptFile.exists){
         var prefix = '/Volumes/server';
     }
     // a fallback directory where scripts are copied to in case photoshop was launched outside of rez
-    scriptFile = File(prefix + '/path/to/photoshop/scripts/exampleScript.js');
+    scriptFile = File(prefix + '/path/to/photoshop_tools/scripts/exampleScript.js');
 }
 
 $.evalFile(scriptFile);
