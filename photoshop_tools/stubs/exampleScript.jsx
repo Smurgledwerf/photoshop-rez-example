@@ -25,3 +25,16 @@ if (!scriptFile.exists){
 $.evalFile(scriptFile);
 
 main();
+
+/*
+You might think you could use the `#include` syntax, but that can't read variables.
+It interprets everything literally, so none of these worked:
+
+#include %REZ_PHOTOSHOP_TOOLS_ROOT%/photoshop_tools/scripts/exampleScript.js
+#include $.getenv("REZ_PHOTOSHOP_TOOLS_ROOT") + '/photoshop_tools/scripts/exampleScript.js'
+var scriptPath = $.getenv("REZ_PHOTOSHOP_TOOLS_ROOT") + '/photoshop_tools/scripts/exampleScript.js'
+#include scriptPath
+
+Fortunately we can evaluate the script file and then run the main function,
+which assumes the script's entry point is a function named `main`.
+*/
