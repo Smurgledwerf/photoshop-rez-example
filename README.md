@@ -28,3 +28,12 @@ Sometimes artists (or even myself) will launch photoshop normally, or will open 
 This will mean that it will not be in a rez environment, and won't have the $REZ_PHOTOSHOP_TOOLS_ROOT environment variable.
 To account for this, as part of the release process, I copy the build to a known location on a shared network.
 The stubs will fallback to that server location if the environment variable does not exist.
+
+## Launcher
+This will be similar to however you launch other software in rez environments. For example on windows, create a .bat file with:
+```
+@echo off
+rez-env photoshop_tools -c "photoshop"
+```
+You can put this on a shared network drive somewhere, create a shortcut to the user's desktop, and add a custom icon to it.
+Since no version is specified, it will always pick up the latest version (or your local build if you are developing/testing).
