@@ -33,7 +33,7 @@ The stubs will fallback to that server location if the environment variable does
 This will be similar to however you launch other software in rez environments. For example on windows, create a .bat file with:
 ```
 @echo off
-rez-env photoshop_tools -c "photoshop"
+rez-env photoshop_tools photoshop-2023 -c "photoshop"
 ```
 You can put this on a shared network drive somewhere, create a shortcut to the user's desktop, and add a custom icon to it.
 Since no version is specified, it will always pick up the latest version (or your local build if you are developing/testing).
