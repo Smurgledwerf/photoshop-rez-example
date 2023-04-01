@@ -10,6 +10,7 @@ These scripts will not be copied to photoshop's scripts directory, they will liv
 ## Stubs
 All the scripts have corresponding .jsx "stubs" that will be deployed to the Presets/Scripts directory
 in photoshop's install directory. Example on windows: C:\Program Files\Adobe\Adobe Photoshop 2023\Presets\Scripts.
+To help distinguish your custom scripts, it may be useful to add a studio acronym or other prefix to these stubs.
 
 This only needs to happen once per script, per computer (per photoshop version if you have multiple).
 The only thing these stubs do is find the actual .js script and run it. This allows you to iterate on your .js scripts as much as you want,
